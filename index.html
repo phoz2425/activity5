@@ -9,6 +9,10 @@
 <body>
 
 <div class="carousel">
+    <!-- Navigation Buttons (Moved to the top) -->
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
     <div class="slides">
         <div class="slide fade">
             <img src="img/Team_Collage_Slider.jpg" alt="Team Collage">
@@ -24,10 +28,6 @@
         </div>
     </div>
 
-    <!-- Navigation Buttons -->
-    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-    <a class="next" onclick="changeSlide(1)">&#10095;</a>
-
     <!-- Dot Indicators -->
     <div class="dots">
         <span class="dot" onclick="setSlide(1)"></span>
@@ -36,6 +36,7 @@
         <span class="dot" onclick="setSlide(4)"></span>
     </div>
 </div>
+
 
 <script src="script.js"></script>
 
