@@ -3,18 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XML Carousel</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Image Carousel</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <div class="slideshow-container" id="carousel"></div>
+<div class="carousel">
+    <div class="slides">
+        <div class="slide fade">
+            <img src="img/Team_Collage_Slider.jpg" alt="Team Collage">
+        </div>
+        <div class="slide fade">
+            <img src="img/Winter_2024_Little_Dog_Website_Sliders-1.jpg" alt="Winter 2024 Little Dog">
+        </div>
+        <div class="slide fade">
+            <img src="img/4-4.png" alt="Slide 3">
+        </div>
+        <div class="slide fade">
+            <img src="img/3-4.png" alt="Slide 4">
+        </div>
+    </div>
 
-    <a class="prev" onclick="changeSlide(-1)">❮</a>
-    <a class="next" onclick="changeSlide(1)">❯</a>
+    <!-- Navigation Buttons -->
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
 
-    <div style="text-align:center" id="dots"></div>
+    <!-- Dot Indicators -->
+    <div class="dots">
+        <span class="dot" onclick="setSlide(1)"></span>
+        <span class="dot" onclick="setSlide(2)"></span>
+        <span class="dot" onclick="setSlide(3)"></span>
+        <span class="dot" onclick="setSlide(4)"></span>
+    </div>
+</div>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
