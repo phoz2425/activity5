@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carousel>
+    <meta viewport="width=device-width, initial-scale=1" />
+    <styles>
+        <style>* { box-sizing: border-box; }</style>
+        <style>body { font-family: Verdana, sans-serif; margin: 0; }</style>
+        <style>.mySlides { display: none; }</style>
+        <style>img { vertical-align: middle; }</style>
+        <style>.slideshow-container { max-width: 1000px; position: relative; margin: auto; }</style>
+        <style>.prev, .next { cursor: pointer; position: absolute; top: 50%; padding: 16px; color: white; font-weight: bold; font-size: 18px; transition: 0.6s ease; user-select: none; }</style>
+        <style>.next { right: 0; }</style>
+        <style>.prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }</style>
+        <style>.text { color: #f2f2f2; font-size: 15px; padding: 8px 12px; position: absolute; bottom: 8px; width: 100%; text-align: center; }</style>
+        <style>.numbertext { color: #f2f2f2; font-size: 12px; padding: 8px 12px; position: absolute; top: 0; }</style>
+        <style>.dot { cursor: pointer; height: 15px; width: 15px; margin: 0 2px; background-color: #bbb; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease; }</style>
+        <style>.active, .dot:hover { background-color: #717171; }</style>
+    </styles>
+    
+    <slideshow-container>
+        <slide>
+            <number>1 / 3</number>
+            <image src="img/1.jpg" width="100%" />
+            <caption>Caption One</caption>
+        </slide>
+        <slide>
+            <number>2 / 3</number>
+            <image src="img/2.jpg" width="100%" />
+            <caption>Caption Two</caption>
+        </slide>
+        <slide>
+            <number>3 / 3</number>
+            <image src="img/3.jpg" width="100%" />
+            <caption>Caption Three</caption>
+        </slide>
+    </slideshow-container>
+    
+    <navigation>
+        <prev action="plusSlides(-1)">&#x276E;</prev>
+        <next action="plusSlides(1)">&#x276F;</next>
+    </navigation>
+    
+    <dots>
+        <dot action="currentSlide(1)" />
+        <dot action="currentSlide(2)" />
+        <dot action="currentSlide(3)" />
+    </dots>
+    
+    <script>
+        <![CDATA[
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByTagName("slide");
+            let dots = document.getElementsByTagName("dot");
+            if (n > slides.length) { slideIndex = 1; }
+            if (n < 1) { slideIndex = slides.length; }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].setAttribute("style", "display: none;");
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].setAttribute("class", dots[i].getAttribute("class").replace(" active", ""));
+            }
+            slides[slideIndex-1].setAttribute("style", "display: block;");
+            dots[slideIndex-1].setAttribute("class", dots[slideIndex-1].getAttribute("class") + " active");
+        }
+        ]]>
+    </script>
+</carousel>
