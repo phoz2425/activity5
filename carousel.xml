@@ -1,33 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <carousel>
-    <slide>
-        <number>1 / 4</number>
-        <image src="img/Team_Collage_Slider.jpg" />
-        <caption></caption>
-    </slide>
-    <slide>
-        <number>2 / 4</number>
-        <image src="img/Winter_2024_Little_Dog_Website_Sliders-1.jpg" />
-        <caption></caption>
-    </slide>
-    <slide>
-        <number>3 / 4</number>
-        <image src="img/4-4.png" />
-        <caption></caption>
-    </slide>
-    <slide>
-        <number>4 / 4</number>
-        <image src="img/3-4.png" />
-        <caption></caption>
-    </slide>
-
- <prev>&#10094;</prev>
-    <next>&#10095;</next>
-
-    <dots>
-        <dot slide="1"></dot>
-        <dot slide="2"></dot>
-        <dot slide="3"></dot>
-        <dot slide="4"></dot>
-    </dots>
+    <navigation>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </navigation>
+    <slides>
+        <slide class="active">
+            <number>1 / 4</number>
+            <image src="img/Team_Collage_Slider.jpg" />
+            <caption></caption>
+        </slide>
+        <slide>
+            <number>2 / 4</number>
+            <image src="img/Winter_2024_Little_Dog_Website_Sliders-1.jpg" />
+            <caption></caption>
+        </slide>
+        <slide>
+            <number>3 / 4</number>
+            <image src="img/4-4.png" />
+            <caption></caption>
+        </slide>
+        <slide>
+            <number>4 / 4</number>
+            <image src="img/3-4.png" />
+            <caption></caption>
+        </slide>
+    </slides>
+    <indicators>
+        <dot class="active" onclick="currentSlide(1)"></dot>
+        <dot onclick="currentSlide(2)"></dot>
+        <dot onclick="currentSlide(3)"></dot>
+        <dot onclick="currentSlide(4)"></dot>
+    </indicators>
 </carousel>
