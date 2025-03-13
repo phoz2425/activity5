@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XML-Based Carousel</title>
+    <title>XML Carousel</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,12 +13,7 @@
     <a class="prev" onclick="changeSlide(-1)">❮</a>
     <a class="next" onclick="changeSlide(1)">❯</a>
 
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span> 
-        <span class="dot" onclick="currentSlide(2)"></span> 
-        <span class="dot" onclick="currentSlide(3)"></span> 
-        <span class="dot" onclick="currentSlide(4)"></span> 
-    </div>
+    <div style="text-align:center" id="dots"></div>
 
     <script src="script.js"></script>
 </body>
