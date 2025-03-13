@@ -3,21 +3,31 @@
     <slide>
         <number>1 / 4</number>
         <image src="img/Team_Collage_Slider.jpg" />
-        <caption>Little Dog</caption>
+        <caption></caption>
     </slide>
     <slide>
         <number>2 / 4</number>
         <image src="img/Winter_2024_Little_Dog_Website_Sliders-1.jpg" />
-        <caption>Little Dog</caption>
+        <caption></caption>
     </slide>
     <slide>
         <number>3 / 4</number>
         <image src="img/4-4.png" />
-        <caption>Little Dog</caption>
+        <caption></caption>
     </slide>
     <slide>
         <number>4 / 4</number>
         <image src="img/3-4.png" />
-        <caption>Little Dog</caption>
+        <caption></caption>
     </slide>
+
+ <prev>&#10094;</prev>
+    <next>&#10095;</next>
+
+    <dots>
+        <dot slide="1"></dot>
+        <dot slide="2"></dot>
+        <dot slide="3"></dot>
+        <dot slide="4"></dot>
+    </dots>
 </carousel>
