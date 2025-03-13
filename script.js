@@ -1,4 +1,4 @@
-let slideIndex = 1;
+let slideIndex = 0;
 showSlides(slideIndex);
 
 function changeSlide(n) {
@@ -6,21 +6,21 @@ function changeSlide(n) {
 }
 
 function setSlide(n) {
-    showSlides(slideIndex = n);
+    showSlides(slideIndex = n - 1);
 }
 
 function showSlides(n) {
-    let slides = document.querySelectorAll('.slide'); // Use class selector
-    let dots = document.querySelectorAll('.dot'); // Use class selector
-    
-    if (n > slides.length) { slideIndex = 1; }
-    if (n < 1) { slideIndex = slides.length; }
-    
+    let slides = document.querySelectorAll('.slide'); // Fix: Use correct class name
+    let dots = document.querySelectorAll('.dot'); // Fix: Use correct class name
+
+    if (n >= slides.length) { slideIndex = 0; }
+    if (n < 0) { slideIndex = slides.length - 1; }
+
     slides.forEach(slide => slide.style.display = "none");
     dots.forEach(dot => dot.classList.remove("active"));
-    
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].classList.add("active");
+
+    slides[slideIndex].style.display = "block";
+    dots[slideIndex].classList.add("active");
 }
 
 // Auto-slide every 5 seconds
